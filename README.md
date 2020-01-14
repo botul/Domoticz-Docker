@@ -1,7 +1,9 @@
 # Domoticz-Docker
 Domoticz configuration in Docker containers on Raspberry Pi (4) with mqtt broker and zigbee2mqtt
 
-#start and enable ssh server
+
+Start and enable ssh server:
+
 sudo systemctl start ssh
 sudo systemctl enable ssh
 
@@ -12,9 +14,7 @@ ifconfig
 sudo systemctl start ssh
 sudo systemctl enable ssh
 
-
 $ssh -l pi XXX.XXX.X.XXX
-
 
 $sudo apt update
 $sudo apt upgrade
