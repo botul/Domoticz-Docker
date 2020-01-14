@@ -4,7 +4,7 @@ docker-compose Domoticz configuration with mqtt broker and zigbee2mqtt container
 Domoticz is a Home Automation System that lets you monitor and configure various devices like: lights, switches, various sensors/meters like temperature, humidity, electra, gas, water and much more. Notifications/Alerts can be sent to any mobile device.
 Below you will find a small, step-by-step setup environment with domoticz, mqtt and zigbee2mqtt configuration in one docker-compose file.
 
-##Hardware that I used: 
+## Hardware that I used: 
 * Raspberry Pi 4 with 2GB RAM.
 * CC2531 USB dongle (zigbee)
 
