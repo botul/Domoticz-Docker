@@ -34,4 +34,3 @@ services:
       - /run/udev:/run/udev:ro
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
-
