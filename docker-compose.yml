@@ -1,0 +1,37 @@
+version: '3'
+services:
+  domoticz:
+    image: linuxserver/domoticz:latest
+    container_name: domoticz
+    environment:
+      - PUID=1001
+      - GUID=1001
+      - TZ=Europe/Warsaw
+    volumes:
+      - /home/botul/docker-data/domoticz:/config
+    ports:
+      - 8080:8080
+      - 6144:6144
+      - 1443:1443
+    restart: unless-stopped
+  mqtt:
+    image: eclipse-mosquitto
+    container_name: mqtt
+    environment:
+      - TZ=Europe/Warsaw
+    volumes:
+      - /home/botul/docker-data/mosquitto:/mosquitto/config
+    ports:
+      - 9001:9001
+  zigbee:
+    image: koenkk/zigbee2mqtt
+    container_name: zigbee
+    privileged: true
+    environment:
+      - TZ=Europe/Warsaw
+    volumes:
+      - /home/botul/docker-data/zigbee/data:/app/data
+      - /run/udev:/run/udev:ro
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+
