@@ -101,7 +101,7 @@ result should looks like: `ttyACM0` - in this case device path is `/dev/ttyACM0`
 ### Creating and configuring docker images:
 
 ** Domoticz
-(Please change paths to your home directory)
+(Please change paths to your home directory and set your timezone)
 
 ```
 $docker create \
